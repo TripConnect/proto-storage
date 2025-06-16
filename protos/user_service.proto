@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package backend.user_service;
 
-option go_package = "github.com/TripConnect/user-service";
+option go_package = "github.com/TripConnect/user_service;protos";
 
 service UserService {
     rpc SignIn (SignInRequest) returns (AuthenticatedInfo) {}

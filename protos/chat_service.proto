@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package backend.chat_service;
 
-option go_package = "github.com/TripConnect/chat-service";
+option go_package = "github.com/TripConnect/chat_service;protos";
 
 import "google/protobuf/timestamp.proto";
 

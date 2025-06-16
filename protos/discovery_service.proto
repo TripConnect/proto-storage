@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package backend.discovery_service;
 
-option go_package = "github.com/TripConnect/discovery-service";
+option go_package = "github.com/TripConnect/discovery_service;protos";
 
 service DiscoveryService {
     rpc Discover (DiscoveryRequest) returns (ServiceInstance) {}
