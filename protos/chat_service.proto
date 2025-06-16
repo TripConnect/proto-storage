@@ -58,6 +58,8 @@ message GetChatMessagesRequest {
 message SearchChatMessagesRequest {
     optional string conversation_id = 1;
     string term = 2;
+    int32 page_number = 3;
+    int32 page_size = 4;
 }
 
 message ChatMessages {
