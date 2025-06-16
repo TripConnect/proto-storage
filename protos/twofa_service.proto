@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package backend.twofa_service;
 
+option go_package = "github.com/TripConnect/twofa-service";
+
 service TwoFactorAuthenticationService {
     rpc GenerateSetting (Generate2faRequest) returns (Generate2faResponse) {}
     rpc CreateSetting (Create2faRequest) returns (Create2faResponse) {}
