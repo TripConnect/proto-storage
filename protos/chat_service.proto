@@ -52,14 +52,15 @@ message GetChatMessagesRequest {
     string conversation_id = 1;
     optional google.protobuf.Timestamp before = 2;
     optional google.protobuf.Timestamp after = 3;
-    int32 page_size = 4;
+    int32 limit = 4;
 }
 
 message SearchChatMessagesRequest {
     optional string conversation_id = 1;
     string term = 2;
-    int32 page_number = 3;
-    int32 page_size = 4;
+    optional google.protobuf.Timestamp before = 3;
+    optional google.protobuf.Timestamp after = 4;
+    int32 limit = 5;
 }
 
 message ChatMessages {
