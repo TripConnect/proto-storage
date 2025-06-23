@@ -35,7 +35,12 @@ message Validate2faRequest {
     string otp = 2;
 }
 
+enum ValidationStatus {
+    INVALID = 0;
+    VALID = 1;
+}
+
 message Validate2faResponse {
     bool success = 1;
-    string status = 2;
+    ValidationStatus status = 2;
 }
