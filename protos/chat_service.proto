@@ -76,10 +76,11 @@ message Conversation {
 }
 
 message SearchConversationsRequest {
-    optional ConversationType type = 1;
-    string term = 2;
-    int32 page_number = 3;
-    int32 page_size = 4;
+    string user_id = 1;
+    optional ConversationType type = 2;
+    string term = 3;
+    int32 page_number = 4;
+    int32 page_size = 5;
 }
 
 message Conversations {
