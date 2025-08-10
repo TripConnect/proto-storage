@@ -21,7 +21,8 @@ message ChatMessage {
     string conversation_id = 2;
     string from_user_id = 3;
     string content = 4;
-    google.protobuf.Timestamp created_at = 5;
+    google.protobuf.Timestamp sent_time = 5;
+    google.protobuf.Timestamp created_time = 6;
 }
 
 message CreateChatMessageAck {
