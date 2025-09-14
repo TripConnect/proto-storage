@@ -34,6 +34,8 @@ message CreateLivestreamRequest {
 message SearchLivestreamsRequest {
     string term = 1;
     string status = 2;
+    int32 page_number = 3;
+    int32 page_size = 4;
 }
 
 message FindLivestreamRequest {
