@@ -23,7 +23,7 @@ message Livestream {
 }
 
 message Livestreams {
-    Livestream livestreams = 1;
+    repeated Livestream livestreams = 1;
 }
 
 message CreateLivestreamRequest {
