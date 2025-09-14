@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package backend.livestream_service;
+
+option go_package = "github.com/TripConnect/livestream_service;protos";
+
+import "google/protobuf/timestamp.proto";
+
+service ChatService {
+    rpc CreateLivestream (CreateLivestreamRequest) returns (Livestream) {}
+    rpc EndLivestream (EndLivestreamRequest) returns (Livestream) {}
+    rpc FindLivestream (FindLivestreamRequest) returns (Livestream) {}
+    rpc SearchLivestream (SearchConversationsRequest) returns (Livestreams) {}
+}
+
+message Livestream {
+    string id = 1;
+    string status = 2;
+    string title = 3;
+    string thumbnail = 4;
+    string hls_link = 5;
+    google.protobuf.Timestamp create_time = 6;
+}
+
+message Livestreams {
+    Livestream livestreams = 1;
+}
+
+message CreateLivestreamRequest {
+    string title = 1;
+    string thumbnail = 2;
+}
+
+message SearchConversationsRequest {
+    string term = 1;
+    string status = 2;
+}
+
+message FindLivestreamRequest {
+    string livestream_id = 1;
+}
+
+message EndLivestreamRequest {
+    string livestream_id = 1;
+}
