@@ -10,7 +10,7 @@ service ChatService {
     rpc CreateLivestream (CreateLivestreamRequest) returns (Livestream) {}
     rpc EndLivestream (EndLivestreamRequest) returns (Livestream) {}
     rpc FindLivestream (FindLivestreamRequest) returns (Livestream) {}
-    rpc SearchLivestream (SearchConversationsRequest) returns (Livestreams) {}
+    rpc SearchLivestream (SearchLivestreamsRequest) returns (Livestreams) {}
 }
 
 message Livestream {
@@ -31,7 +31,7 @@ message CreateLivestreamRequest {
     string thumbnail = 2;
 }
 
-message SearchConversationsRequest {
+message SearchLivestreamsRequest {
     string term = 1;
     string status = 2;
 }
