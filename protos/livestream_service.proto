@@ -6,7 +6,7 @@ option go_package = "github.com/TripConnect/livestream_service;protos";
 
 import "google/protobuf/timestamp.proto";
 
-service LivetreamService {
+service LivestreamService {
     rpc CreateLivestream (CreateLivestreamRequest) returns (Livestream) {}
     rpc EndLivestream (EndLivestreamRequest) returns (Livestream) {}
     rpc FindLivestream (FindLivestreamRequest) returns (Livestream) {}
